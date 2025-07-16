@@ -12,211 +12,280 @@
 #    Object Properties
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/definedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/definedBy> rdf:type owl:ObjectProperty ;
-                                                                                                            rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order> ;
-                                                                                                            rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#createdFun
+:createdFun rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/functionalDiagram
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/functionalDiagram> rdf:type owl:ObjectProperty ;
-                                                                                                                    rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model> ;
-                                                                                                                    rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Block_Diagram> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#definedBy
+:definedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Customer_Order ;
+           rdfs:range :Order_BOM ;
+           rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+           rdfs:label "definedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasComponent
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasComponent> rdf:type owl:ObjectProperty ;
-                                                                                                               rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure> ;
-                                                                                                               rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#functionalDiagram
+:functionalDiagram rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Functional_Model ;
+                   rdfs:range :Functional_Block_Diagram ;
+                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                   rdfs:label "functionalDiagram" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasDomain
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasDomain> rdf:type owl:ObjectProperty ;
-                                                                                                            rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> ;
-                                                                                                            rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Domain> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :Physical_Structure ;
+              rdfs:range :Component ;
+              rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+              rdfs:label "hasComponent" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/includesComponent
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/includesComponent> rdf:type owl:ObjectProperty ;
-                                                                                                                    rdfs:subPropertyOf <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasComponent> ;
-                                                                                                                    rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> ;
-                                                                                                                    rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#hasDomain
+:hasDomain rdf:type owl:ObjectProperty ;
+           rdfs:domain :Component ;
+           rdfs:range :Domain ;
+           rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+           rdfs:label "hasDomain" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isAllocatedTo
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isAllocatedTo> rdf:type owl:ObjectProperty ;
-                                                                                                                rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model> ;
-                                                                                                                rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#includesComponent
+:includesComponent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasComponent ;
+                   rdfs:domain :Component ;
+                   rdfs:range :Component ;
+                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                   rdfs:label "includesComponent" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isCreatedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isCreatedBy> rdf:type owl:ObjectProperty ;
-                                                                                                              rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order> ;
-                                                                                                              rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Routing> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isAllocatedTo
+:isAllocatedTo rdf:type owl:ObjectProperty ;
+               rdfs:domain :Functional_Model ;
+               rdfs:range :Logical_Model ;
+               rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+               rdfs:label "isAllocatedTo" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDeliveredBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDeliveredBy> rdf:type owl:ObjectProperty ;
-                                                                                                                rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> ;
-                                                                                                                rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isCreatedBy
+:isCreatedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :Production_Order ;
+             rdfs:range :Routing ;
+             rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+             rdfs:label "isCreatedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDesignedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDesignedBy> rdf:type owl:ObjectProperty ;
-                                                                                                               rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> ;
-                                                                                                               rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Design_Item> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isDeliveredBy
+:isDeliveredBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Component ;
+               rdfs:range :Supplier ;
+               rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+               rdfs:label "isDeliveredBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isEngineeredBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isEngineeredBy> rdf:type owl:ObjectProperty ;
-                                                                                                                 rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product> ;
-                                                                                                                 rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model> ,
-                                                                                                                            <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model> ,
-                                                                                                                            <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model> ,
-                                                                                                                            <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isDesignedBy
+:isDesignedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Component ;
+              rdfs:range :Design_Item ;
+              rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+              rdfs:label "isDesignedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isImplementedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isImplementedBy> rdf:type owl:ObjectProperty ;
-                                                                                                                  rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model> ;
-                                                                                                                  rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isEngineeredBy
+:isEngineeredBy rdf:type owl:ObjectProperty ;
+                rdfs:domain :Product ;
+                rdfs:range :Functional_Model ,
+                           :Logical_Model ,
+                           :Physical_Model ,
+                           :Requirements_Model ;
+                rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                rdfs:label "isEngineeredBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isManagedIn
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isManagedIn> rdf:type owl:ObjectProperty ;
-                                                                                                              rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier> ;
-                                                                                                              rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Collaboration> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isImplementedBy
+:isImplementedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Requirements_Model ;
+                 rdfs:range :Functional_Model ;
+                 rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                 rdfs:label "isImplementedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedBy> rdf:type owl:ObjectProperty ;
-                                                                                                               rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM> ;
-                                                                                                               rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isManagedIn
+:isManagedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Supplier ;
+             rdfs:range :Collaboration ;
+             rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+             rdfs:label "isManagedIn" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedWith
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedWith> rdf:type owl:ObjectProperty ;
-                                                                                                                 rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant> ;
-                                                                                                                 rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isProducedBy
+:isProducedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Order_BOM ;
+              rdfs:range :Plant ;
+              rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+              rdfs:label "isProducedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isRealizedBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isRealizedBy> rdf:type owl:ObjectProperty ;
-                                                                                                               rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model> ;
-                                                                                                               rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isProducedWith
+:isProducedWith rdf:type owl:ObjectProperty ;
+                rdfs:domain :Plant ;
+                rdfs:range :Production_Order ;
+                rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                rdfs:label "isProducedWith" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isShippedTo
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isShippedTo> rdf:type owl:ObjectProperty ;
-                                                                                                              rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product> ;
-                                                                                                              rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isRealizedBy
+:isRealizedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Logical_Model ;
+              rdfs:range :Physical_Model ;
+              rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+              rdfs:label "isRealizedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isSoldBy
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isSoldBy> rdf:type owl:ObjectProperty ;
-                                                                                                           rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product> ;
-                                                                                                           rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isShippedTo
+:isShippedTo rdf:type owl:ObjectProperty ;
+             rdfs:domain :Product ;
+             rdfs:range :Customer ;
+             rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+             rdfs:label "isShippedTo" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/logicalDiagram
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/logicalDiagram> rdf:type owl:ObjectProperty ;
-                                                                                                                 rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model> ;
-                                                                                                                 rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Block_Diagram> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isSoldBy
+:isSoldBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :Product ;
+          rdfs:range :Customer_Order ;
+          rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+          rdfs:label "isSoldBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/physicalStructure
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/physicalStructure> rdf:type owl:ObjectProperty ;
-                                                                                                                    rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model> ;
-                                                                                                                    rdfs:range <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#logicalDiagram
+:logicalDiagram rdf:type owl:ObjectProperty ;
+                rdfs:domain :Logical_Model ;
+                rdfs:range :Logical_Block_Diagram ;
+                rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                rdfs:label "logicalDiagram" .
+
+
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#physicalStructure
+:physicalStructure rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Physical_Model ;
+                   rdfs:range :Physical_Structure ;
+                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
+                   rdfs:label "physicalStructure" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/productId
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/productId> rdf:type owl:DatatypeProperty ;
-                                                                                                            rdfs:domain <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product> .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Configuration_Item
+:Configuration_Item rdf:type owl:DatatypeProperty ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Model_Type
+:Model_Type rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Object_Id
+:Object_Id rdf:type owl:DatatypeProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Object_Name
+:Object_Name rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Source_System
+:Source_System rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Collaboration
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Collaboration> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Collaboration
+:Collaboration rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Component
+:Component rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Customer
+:Customer rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Customer_Order
+:Customer_Order rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Design_Item
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Design_Item> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Design_Item
+:Design_Item rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Domain
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Domain> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Domain
+:Domain rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Block_Diagram
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Block_Diagram> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Functional_Block_Diagram
+:Functional_Block_Diagram rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Functional_Model
+:Functional_Model rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Block_Diagram
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Block_Diagram> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Logical_Block_Diagram
+:Logical_Block_Diagram rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Logical_Model
+:Logical_Model rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Order_BOM
+:Order_BOM rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Physical_Model
+:Physical_Model rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Physical_Structure
+:Physical_Structure rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Plant
+:Plant rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Product
+:Product rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Production_Order
+:Production_Order rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Requirements_Model
+:Requirements_Model rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Routing
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Routing> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Routing
+:Routing rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier
-<https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Supplier
+:Supplier rdf:type owl:Class .
 
 
 #################################################################
@@ -224,25 +293,25 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Collaboration>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Design_Item>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Domain>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Block_Diagram>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Block_Diagram>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Routing>
-                <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier>
+  owl:members ( :Collaboration
+                :Component
+                :Customer
+                :Customer_Order
+                :Design_Item
+                :Domain
+                :Functional_Block_Diagram
+                :Functional_Model
+                :Logical_Block_Diagram
+                :Logical_Model
+                :Order_BOM
+                :Physical_Model
+                :Physical_Structure
+                :Plant
+                :Product
+                :Production_Order
+                :Requirements_Model
+                :Routing
+                :Supplier
               )
 ] .
 
