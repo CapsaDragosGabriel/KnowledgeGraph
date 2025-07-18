@@ -12,12 +12,12 @@
 #    Object Properties
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#createdFun
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/createdFun
 :createdFun rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#definedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/definedBy
 :definedBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Customer_Order ;
            rdfs:range :Order_BOM ;
@@ -25,7 +25,7 @@
            rdfs:label "definedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#functionalDiagram
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/functionalDiagram
 :functionalDiagram rdf:type owl:ObjectProperty ;
                    rdfs:domain :Functional_Model ;
                    rdfs:range :Functional_Block_Diagram ;
@@ -33,7 +33,7 @@
                    rdfs:label "functionalDiagram" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#hasComponent
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain :Physical_Structure ;
               rdfs:range :Component ;
@@ -41,7 +41,7 @@
               rdfs:label "hasComponent" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#hasDomain
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasDomain
 :hasDomain rdf:type owl:ObjectProperty ;
            rdfs:domain :Component ;
            rdfs:range :Domain ;
@@ -49,7 +49,7 @@
            rdfs:label "hasDomain" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#hasMBOM
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasMBOM
 :hasMBOM rdf:type owl:ObjectProperty ;
          rdfs:domain :Routing ;
          rdfs:range :MBOM ;
@@ -57,7 +57,7 @@
          rdfs:label "hasMBOM" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#includesComponent
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/includesComponent
 :includesComponent rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasComponent ;
                    rdfs:domain :Component ;
@@ -66,7 +66,7 @@
                    rdfs:label "includesComponent" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isAllocatedTo
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isAllocatedTo
 :isAllocatedTo rdf:type owl:ObjectProperty ;
                rdfs:domain :Functional_Model ;
                rdfs:range :Logical_Model ;
@@ -74,7 +74,7 @@
                rdfs:label "isAllocatedTo" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isCreatedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isCreatedBy
 :isCreatedBy rdf:type owl:ObjectProperty ;
              rdfs:domain :Production_Order ;
              rdfs:range :Routing ;
@@ -82,7 +82,7 @@
              rdfs:label "isCreatedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isDeliveredBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDeliveredBy
 :isDeliveredBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Component ;
                rdfs:range :Supplier ;
@@ -90,15 +90,16 @@
                rdfs:label "isDeliveredBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isDesignedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isDesignedBy
 :isDesignedBy rdf:type owl:ObjectProperty ;
-              rdfs:domain :Component ;
+              rdfs:domain :Component ,
+                          :Design_Item ;
               rdfs:range :Design_Item ;
               rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
               rdfs:label "isDesignedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isEngineeredBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isEngineeredBy
 :isEngineeredBy rdf:type owl:ObjectProperty ;
                 rdfs:domain :Product ;
                 rdfs:range :Functional_Model ,
@@ -109,7 +110,7 @@
                 rdfs:label "isEngineeredBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isImplementedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isImplementedBy
 :isImplementedBy rdf:type owl:ObjectProperty ;
                  rdfs:domain :Requirements_Model ;
                  rdfs:range :Functional_Model ;
@@ -117,7 +118,7 @@
                  rdfs:label "isImplementedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isManagedIn
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isManagedIn
 :isManagedIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Supplier ;
              rdfs:range :Collaboration ;
@@ -125,7 +126,7 @@
              rdfs:label "isManagedIn" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isProducedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedBy
 :isProducedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :Order_BOM ;
               rdfs:range :Plant ;
@@ -133,7 +134,7 @@
               rdfs:label "isProducedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isProducedWith
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isProducedWith
 :isProducedWith rdf:type owl:ObjectProperty ;
                 rdfs:domain :Plant ;
                 rdfs:range :Production_Order ;
@@ -141,7 +142,7 @@
                 rdfs:label "isProducedWith" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isRealizedBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isRealizedBy
 :isRealizedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :Logical_Model ;
               rdfs:range :Physical_Model ;
@@ -149,7 +150,7 @@
               rdfs:label "isRealizedBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isShippedTo
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isShippedTo
 :isShippedTo rdf:type owl:ObjectProperty ;
              rdfs:domain :Product ;
              rdfs:range :Customer ;
@@ -157,7 +158,7 @@
              rdfs:label "isShippedTo" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#isSoldBy
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isSoldBy
 :isSoldBy rdf:type owl:ObjectProperty ;
           rdfs:domain :Product ;
           rdfs:range :Customer_Order ;
@@ -165,7 +166,7 @@
           rdfs:label "isSoldBy" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#logicalDiagram
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/logicalDiagram
 :logicalDiagram rdf:type owl:ObjectProperty ;
                 rdfs:domain :Logical_Model ;
                 rdfs:range :Logical_Block_Diagram ;
@@ -173,7 +174,7 @@
                 rdfs:label "logicalDiagram" .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#physicalStructure
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/physicalStructure
 :physicalStructure rdf:type owl:ObjectProperty ;
                    rdfs:domain :Physical_Model ;
                    rdfs:range :Physical_Structure ;
@@ -185,31 +186,31 @@
 #    Data properties
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Configuration_Item
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Configuration_Item
 :Configuration_Item rdf:type owl:DatatypeProperty ;
                     rdfs:domain owl:Thing ;
                     rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Label
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Label
 :Label rdf:type owl:DatatypeProperty ;
        rdfs:domain owl:Thing ;
        rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Model_Type
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Model_Type
 :Model_Type rdf:type owl:DatatypeProperty ;
             rdfs:domain owl:Thing ;
             rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Object_Id
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Object_Id
 :Object_Id rdf:type owl:DatatypeProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Source_System
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Source_System
 :Source_System rdf:type owl:DatatypeProperty ;
                rdfs:domain owl:Thing ;
                rdfs:range xsd:string .
@@ -219,101 +220,101 @@
 #    Classes
 #################################################################
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Collaboration
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Collaboration
 :Collaboration rdf:type owl:Class ;
                rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Component
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Component
 :Component rdf:type owl:Class ;
            rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Customer
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer
 :Customer rdf:type owl:Class ;
           rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Customer_Order
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Customer_Order
 :Customer_Order rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Design_Item
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Design_Item
 :Design_Item rdf:type owl:Class ;
              rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Domain
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Domain
 :Domain rdf:type owl:Class ;
         rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Functional_Block_Diagram
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Block_Diagram
 :Functional_Block_Diagram rdf:type owl:Class ;
                           rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Functional_Model
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Functional_Model
 :Functional_Model rdf:type owl:Class ;
                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Logical_Block_Diagram
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Block_Diagram
 :Logical_Block_Diagram rdf:type owl:Class ;
                        rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Logical_Model
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Logical_Model
 :Logical_Model rdf:type owl:Class ;
                rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#MBOM
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/MBOM
 :MBOM rdf:type owl:Class ;
       rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Order_BOM
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Order_BOM
 :Order_BOM rdf:type owl:Class ;
            rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Physical_Model
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Model
 :Physical_Model rdf:type owl:Class ;
                 rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Physical_Structure
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Physical_Structure
 :Physical_Structure rdf:type owl:Class ;
                     rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Plant
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Plant
 :Plant rdf:type owl:Class ;
        rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Product
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Product
 :Product rdf:type owl:Class ;
          rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Production_Order
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Production_Order
 :Production_Order rdf:type owl:Class ;
                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Requirements_Model
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Requirements_Model
 :Requirements_Model rdf:type owl:Class ;
                     rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Routing
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Routing
 :Routing rdf:type owl:Class ;
          rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
 
-###  https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl#Supplier
+###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/Supplier
 :Supplier rdf:type owl:Class ;
           rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> .
 
