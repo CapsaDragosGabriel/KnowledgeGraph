@@ -35,7 +35,8 @@
 
 ###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
-              rdfs:domain :Physical_Structure ;
+              rdfs:domain :Component ,
+                          :Physical_Structure ;
               rdfs:range :Component ;
               rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
               rdfs:label "hasComponent" .
@@ -55,15 +56,6 @@
          rdfs:range :MBOM ;
          rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
          rdfs:label "hasMBOM" .
-
-
-###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/includesComponent
-:includesComponent rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :hasComponent ;
-                   rdfs:domain :Component ;
-                   rdfs:range :Component ;
-                   rdfs:isDefinedBy <https://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl> ;
-                   rdfs:label "includesComponent" .
 
 
 ###  http://www.semanticweb.org/cenit/ontologies/2025/6/manufacturinghttps://raw.githubusercontent.com/CapsaDragosGabriel/KnowledgeGraph/refs/heads/main/attempt.ttl/isAllocatedTo
